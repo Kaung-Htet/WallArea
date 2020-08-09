@@ -3,18 +3,13 @@ public class Wall {
     private double height;
 
     public Wall (){
-        this (4.0, 5.0);
+        this (0.0, 0.0);
     }
 
     public Wall(double width, double height) {
-        if (width < 0){
-            this.width = 0;
-        } else if (height < 0){
-            this.height =0;
-        } else {
-            this.width = width;
-            this.height = height;
-        }
+        // validation is needed so call setters
+        setWidth(width);
+        setHeight(height);
     }
 
     public double getWidth() {
